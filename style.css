@@ -1,0 +1,20 @@
+.body {
+  margin: auto;
+}
+
+.container {
+  text-align: center;
+  color: chartreuse;
+  background-color: dimgrey;
+}
+
+.brand-logo {
+}
+
+.card-title {
+  color: dimgrey;
+}
+
+#nav-mobile {
+  color: cadetblue;
+}
