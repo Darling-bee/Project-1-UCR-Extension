@@ -120,6 +120,7 @@ $(document).ready(function () {
 				if (drink === true) {
 					drinkAnchor.text(response.drinks[i].strDrink);
 					drinkAnchor.attr("drinkId", response.drinks[i].idDrink);
+					drinkAnchor.attr("href", "#");
 					// drinkAnchor.attr("data-recipe", recipiArr[])
 					$(rumList).append(drinkList);
 					drink = false;
@@ -132,9 +133,10 @@ $(document).ready(function () {
 		});
 	});
 	document.addEventListener("click", function (event) {
-		if (event.target.matches("<a>")) {
+		if (event.target.matches("a")) {
 			console.log("hit");
-			drinkNum = this.drinkId;
+			drinkNum = $(this).attr("drinkId");
+			console.log(drinkNum);
 		}
 	});
 	var drinkNum = "";
