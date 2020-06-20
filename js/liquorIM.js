@@ -23,7 +23,8 @@ $(document).ready(function () {
 	$("#tequila").append(tequilaList);
 	var ginList = $("<ul>");
 	$("#gin").append(ginList);
-	$("<a>").on("click", function () {
+
+	$("document").on("click", function () {
 		alert("Hi");
 	});
 
@@ -36,11 +37,13 @@ $(document).ready(function () {
 		$("#vodka").on("click", function () {
 			console.log("working");
 			for (var i = 0; response.drinks.length; i++) {
-				var drinkList = $("<button>");
+				var drinkList = $("<li>");
 				// drinkList.add("<a>");
 				// drinkList.attr("href", "#");
 				// drinkList.append("<a href='#'></a>");
-				drinkList.append("<a href='#'>" + response.drinks[i].strDrink + "</a>");
+				drinkList.append(
+					"<a href='#'>" + response.drinks[i].strDrink + ":" + "</a>"
+				);
 
 				// drinkList.append(
 				// 	"<button>" + response.drinks[i].strDrink + "</button>"
@@ -64,7 +67,8 @@ $(document).ready(function () {
 		$("#tequila").on("click", function () {
 			for (var i = 0; response.drinks.length; i++) {
 				var drinkList = $("<li>");
-				drinkList.text(response.drinks[i].strDrink);
+				drinkList.append("<a href='#'>" + response.drinks[i].strDrink + "</a>");
+				// drinkList.text(response.drinks[i].strDrink);
 				$(tequilaList).append(drinkList);
 			}
 		});
@@ -78,7 +82,8 @@ $(document).ready(function () {
 		$("#gin").on("click", function () {
 			for (var i = 0; response.drinks.length; i++) {
 				var drinkList = $("<li>");
-				drinkList.text(response.drinks[i].strDrink);
+				// drinkList.text(response.drinks[i].strDrink);
+				drinkList.append("<a href='#'>" + response.drinks[i].strDrink + "</a>");
 				$(ginList).append(drinkList);
 			}
 		});
@@ -92,7 +97,8 @@ $(document).ready(function () {
 		$("#whiskey").on("click", function () {
 			for (var i = 0; response.drinks.length; i++) {
 				var drinkList = $("<li>");
-				drinkList.text(response.drinks[i].strDrink);
+				drinkList.append("<a href='#'>" + response.drinks[i].strDrink + "</a>");
+				// drinkList.text(response.drinks[i].strDrink);
 				$(whiskeyList).append(drinkList);
 			}
 		});
@@ -106,9 +112,39 @@ $(document).ready(function () {
 		$("#rum").on("click", function () {
 			for (var i = 0; response.drinks.length; i++) {
 				var drinkList = $("<li>");
-				drinkList.text(response.drinks[i].strDrink);
-				$(rumList).append(drinkList);
+				var drinkAnchor = $("<a>");
+				$(drinkList).append(drinkAnchor);
+				var drink = true;
+				// drinkList.addClass("anchor");
+				// drinkList.attr("id", "anchor");
+				if (drink === true) {
+					drinkAnchor.text(response.drinks[i].strDrink);
+					drinkAnchor.attr("drinkId", response.drinks[i].idDrink);
+					// drinkAnchor.attr("data-recipe", recipiArr[])
+					$(rumList).append(drinkList);
+					drink = false;
+					// drinkList.text(response.drinks[i].strDrink);
+				} else {
+					drink = true;
+					console.log("Hit");
+				}
 			}
 		});
+	});
+	document.addEventListener("click", function (event) {
+		if (event.target.matches("<a>")) {
+			console.log("hit");
+			drinkNum = this.drinkId;
+		}
+	});
+	var drinkNum = "";
+	$.ajax({
+		url: "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=" + drinkNum,
+		method: "GET",
+	}).then(function (response) {
+		console.log(response);
+		var drinkRecipie = $("<div>");
+		drinkRecipie.text(response.drinks[0].strIngredient1);
+		$("#recipe");
 	});
 });
