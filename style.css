@@ -1,5 +1,8 @@
+/* Classes ------------------------- */
+
 .body {
-  margin: auto;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
@@ -9,12 +12,53 @@
 }
 
 .brand-logo {
+  left: 15px;
+  right: auto;
+  float: left;
+  padding-left: 25px;
 }
 
 .card-title {
   color: dimgrey;
+  font-size: 10px;
 }
+
+.material-icons {
+  padding-left: 5px;
+  padding-right: 10px;
+}
+
+/* ID's ------------------------------- */
 
 #nav-mobile {
   color: cadetblue;
+}
+
+#liquorSearch {
+  padding: 35px;
+}
+
+#randomDrink {
+  padding: 35px;
+}
+
+#barSearch {
+  padding: 35px;
+}
+
+#youTube {
+  padding: 20px;
+}
+
+#maps {
+  padding: 20px;
+}
+
+#alcoholInput {
+}
+
+#rumInput {
+}
+
+#tequilaInput {
 }
