@@ -218,11 +218,11 @@ $(document).ready(function () {
     //end of ingredients list
 
     //start of instructions
+
     var instructions = $("<p>");
     instructions.attr("id", "ins");
-    instructions.html("<h5>", "Instructions: ");
     instructions.text(response.drinks[0].strInstructions);
-    $("#ingList").append(instructions);
+    $("#insTitle").after(instructions);
     console.log(instructions);
     console.log(response.drinks[0].strInstructions);
     //end of instructions
