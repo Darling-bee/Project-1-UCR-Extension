@@ -18,9 +18,13 @@ $(document).ready(function () {
 
     //start of image
     var drinkPic = $("<img>");
-    drinkPic.attr("src", response.drinks[0].strDrinkThumb);
-    $("drinkName").append(drinkPic);
-    console.log("Photo: " + drinkPic);
+    drinkPic.attr(
+      "src",
+      response.drinks[0].strDrinkThumb + "/preview"
+    );
+    drinkPic.addClass("center");
+    $("#drinkName").after(drinkPic);
+    console.log(response.drinks[0].strDrinkThumb);
 
     //Start of ingredients list
     var ing1 = $("<ul>");
@@ -216,6 +220,7 @@ $(document).ready(function () {
     //start of instructions
     var instructions = $("<p>");
     instructions.attr("id", "ins");
+    instructions.html("<h5>", "Instructions: ");
     instructions.text(response.drinks[0].strInstructions);
     $("#ingList").append(instructions);
     console.log(instructions);
