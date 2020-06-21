@@ -1,11 +1,11 @@
 $(document).ready(function () {
-	console.log("ready!");
-
+	// console.log("ready!");
+	var drinkNum = "";
 	$.ajax({
 		url: "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Vodka",
 		method: "GET",
 	}).then(function (response) {
-		console.log(response);
+		// console.log(response);
 	});
 
 	//we need five buttons for spirits
@@ -32,7 +32,7 @@ $(document).ready(function () {
 		url: "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Vodka",
 		method: "GET",
 	}).then(function (response) {
-		console.log(response);
+		// console.log(response);
 
 		$("#vodka").on("click", function () {
 			console.log("working");
@@ -62,7 +62,7 @@ $(document).ready(function () {
 		url: "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Tequila",
 		method: "GET",
 	}).then(function (response) {
-		console.log(response);
+		// console.log(response);
 
 		$("#tequila").on("click", function () {
 			for (var i = 0; response.drinks.length; i++) {
@@ -77,7 +77,7 @@ $(document).ready(function () {
 		url: "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Gin",
 		method: "GET",
 	}).then(function (response) {
-		console.log(response);
+		// console.log(response);
 
 		$("#gin").on("click", function () {
 			for (var i = 0; response.drinks.length; i++) {
@@ -92,7 +92,7 @@ $(document).ready(function () {
 		url: "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Whiskey",
 		method: "GET",
 	}).then(function (response) {
-		console.log(response);
+		// console.log(response);
 
 		$("#whiskey").on("click", function () {
 			for (var i = 0; response.drinks.length; i++) {
@@ -103,46 +103,71 @@ $(document).ready(function () {
 			}
 		});
 	});
+
 	$.ajax({
 		url: "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=rum",
 		method: "GET",
 	}).then(function (response) {
-		console.log(response);
+		// console.log(response);
+		var drinkNum = "";
 
-		$("#rum").on("click", function () {
-			for (var i = 0; response.drinks.length; i++) {
+		$("#rum").on("click", function (event) {
+			// event.stopPropagation();
+			// event.preventDefault();
+			$(rumList).empty();
+			// var drink = true;
+			for (var i = 0; i < response.drinks.length; i++) {
 				var drinkList = $("<li>");
 				var drinkAnchor = $("<a>");
 				$(drinkList).append(drinkAnchor);
-				var drink = true;
+				drinkAnchor.text(response.drinks[i].strDrink);
+				drinkAnchor.attr("data-drinkId", response.drinks[i].idDrink);
+				drinkAnchor.attr("href", "#");
+				$(rumList).append(drinkList);
 				// drinkList.addClass("anchor");
 				// drinkList.attr("id", "anchor");
-				if (drink === true) {
-					drinkAnchor.text(response.drinks[i].strDrink);
-					drinkAnchor.attr("drinkId", response.drinks[i].idDrink);
-					// drinkAnchor.attr("data-recipe", recipiArr[])
-					$(rumList).append(drinkList);
-					drink = false;
-					// drinkList.text(response.drinks[i].strDrink);
-				} else {
-					drink = true;
-					console.log("Hit");
-				}
+				// if (drink === true) {
+
+				// drinkAnchor.attr("data-recipe", recipiArr[])
+
+				// drink = false;
+				// drinkList.text(response.drinks[i].strDrink);
+				// } else {
+				// drink = true;
+				// console.log("Hit");
+				// }
 			}
+			$("a").on("click", function () {
+				// console.log("hit");
+
+				drinkNum = $(this).attr("data-drinkId");
+				// drinkNum += drinkData;
+				// console.log(drinkNum);
+				// $(drinkNumArr).push(drinkNum);
+			});
+			$.ajax({
+				url:
+					"https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=" +
+					drinkNum,
+				method: "GET",
+			}).then(function (response) {
+				console.log(drinkNum);
+				// console.log(response);
+				var drinkRecipe = $("<div>");
+				drinkRecipe.text(response.drinks[0].strIngredient1);
+				$("#recipe").append(drinkRecipe);
+			});
+			// return drinkNum;
+			console.log(drinkNum);
 		});
+		// return drinkNum;
 	});
-	document.addEventListener("click", function (event) {
-		if (event.target.matches("<a>")) {
-			console.log("hit");
-			drinkNum = this.drinkId;
-		}
-	});
-	var drinkNum = "";
+
 	$.ajax({
 		url: "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=" + drinkNum,
 		method: "GET",
 	}).then(function (response) {
-		console.log(response);
+		// console.log(response);
 		var drinkRecipie = $("<div>");
 		drinkRecipie.text(response.drinks[0].strIngredient1);
 		$("#recipe");
