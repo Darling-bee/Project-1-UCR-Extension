@@ -109,13 +109,13 @@ $(document).ready(function () {
 		method: "GET",
 	}).then(function (response) {
 		// console.log(response);
-		var drinkNum = "";
-
-		$("#rum").on("click", function (event) {
+		// var drinkNum = "";
+		// var drink = true;
+		$("#rum").on("click", function () {
 			// event.stopPropagation();
 			// event.preventDefault();
 			$(rumList).empty();
-			// var drink = true;
+
 			for (var i = 0; i < response.drinks.length; i++) {
 				var drinkList = $("<li>");
 				var drinkAnchor = $("<a>");
@@ -126,7 +126,6 @@ $(document).ready(function () {
 				$(rumList).append(drinkList);
 				// drinkList.addClass("anchor");
 				// drinkList.attr("id", "anchor");
-<<<<<<< HEAD
 				// if (drink === true) {
 
 				// drinkAnchor.attr("data-recipe", recipiArr[])
@@ -136,21 +135,8 @@ $(document).ready(function () {
 				// } else {
 				// drink = true;
 				// console.log("Hit");
+				// $(rumList).empty();
 				// }
-=======
-				if (drink === true) {
-					drinkAnchor.text(response.drinks[i].strDrink);
-					drinkAnchor.attr("drinkId", response.drinks[i].idDrink);
-					drinkAnchor.attr("href", "#");
-					// drinkAnchor.attr("data-recipe", recipiArr[])
-					$(rumList).append(drinkList);
-					drink = false;
-					// drinkList.text(response.drinks[i].strDrink);
-				} else {
-					drink = true;
-					console.log("Hit");
-				}
->>>>>>> 2ec6e76bb58e2c3e71427152be00b4dc3fcdc1bb
 			}
 			$("a").on("click", function () {
 				// console.log("hit");
@@ -177,18 +163,6 @@ $(document).ready(function () {
 		});
 		// return drinkNum;
 	});
-<<<<<<< HEAD
-
-=======
-	document.addEventListener("click", function (event) {
-		if (event.target.matches("a")) {
-			console.log("hit");
-			drinkNum = $(this).attr("drinkId");
-			console.log(drinkNum);
-		}
-	});
-	var drinkNum = "";
->>>>>>> 2ec6e76bb58e2c3e71427152be00b4dc3fcdc1bb
 	$.ajax({
 		url: "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=" + drinkNum,
 		method: "GET",
