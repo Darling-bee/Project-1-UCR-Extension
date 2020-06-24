@@ -39,7 +39,7 @@ $(document).ready(function () {
 	});
 	$("select").on("change", function () {
 		// alert("hit");
-		$(".recipe").empty();
+		$("#alcoholDisplay").empty();
 		drinkNum = $(this).val();
 		console.log(drinkNum);
 
@@ -59,12 +59,12 @@ $(document).ready(function () {
 			$("#alcoholDisplay").prepend(randomDrinkName);
 			//end of drink name
 
-			//start of image
-			var drinkPic = $("<img>");
-			drinkPic.attr("src", response.drinks[0].strDrinkThumb + "/preview");
-			drinkPic.addClass("center");
-			$("#alcoholDisplay").after(drinkPic);
-			console.log(response.drinks[0].strDrinkThumb);
+			// start of image
+			// var drinkPic = $("<img>");
+			// drinkPic.attr("src", response.drinks[0].strDrinkThumb + "/preview");
+			// drinkPic.addClass("center");
+			// $("#alcoholDisplay").after(drinkPic);
+			// console.log(response.drinks[0].strDrinkThumb);
 
 			//Start of ingredients list
 			var ing1 = $("<ul>");
