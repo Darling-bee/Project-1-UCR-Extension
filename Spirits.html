@@ -2,59 +2,106 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <title>Random Drink</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
 
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
-
+    <link rel="stylesheet" href="./style.css" />
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="random.css" />
   </head>
-  <body>
-    <body class="grey lighten-2">
-      <!-- Container/Body content -->
-      <main class="container grey lighten-4">
-            <!--Start Navigation Bar -->
-            <nav>
-              <div class="nav-wrapper grey darken-4">
-                <div class="left">
-                  <img class="brand-logo "src="images/alcocall_logo.png" alt="Alcocall Logo">
-                </div>
-                <ul id="nav-mobile" class="right hide-on-sm-and-down">
-                  <li><a href="about.html">About</a></li>
-                  <li><a href="spirits.html">Spirits</a></li>
-                  <li><a href="recipes.html">Recipes</a></li>
-                  <li><a href="bars.html">Bars</a></li>
-                </ul>
-              </div>
-            </nav>
-            <!-- End of Navigation Bar -->
-    <!--Start of main content-->
-    <main>
-            <!--Spirits By Button? Or by Dropdown?-->
-    </main>
-    <!--End of main content-->
-    <!-- Footer Starts -->
-    <footer class="page-footer grey darken-4">
-      <div class="container grey darken-4">
-        <div class="row">
-          <div class="col l6 m6 s12">
-            <h5 class="white-text left-align">AlcoCALL</h5>
-            <p class="grey-text text-lighten-4 left-align">
-              "The virtual bartender application that uses
-              what you've got."
-            </p>
+  <body class="grey lighten-2">
+    <!-- Container/Body content -->
+    <main class="container grey lighten-4">
+      <!--Start Navigation Bar -->
+      <nav>
+        <div class="nav-wrapper grey darken-4">
+          <div class="left">
+            <a href="#" class="brand-logo"></a
+            ><i class="material-icons">whatshot</i>
           </div>
-          <!-- <div class="col l4 offset-6 m6 s12">
+          <ul id="nav-mobile" class="right hide-on-sm-and-down">
+            <li><a href="about.html">About</a></li>
+            <li><a href="spirits.html">Spirits</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="bars.html">Bars</a></li>
+          </ul>
+        </div>
+      </nav>
+      <!-- End of Navigation Bar -->
+
+      <!-- Start of main container -->
+      <section>
+        <div class="row">
+          <h3>Liquor Search Page</h3>
+          <div class="row container orange lighten-2">
+            <div class="row">
+              <div id="vodkaInput" class="col s12 m4 l4 red lighten-5">
+                <button>Vodka</button>
+              </div>
+              <div id="rumInput" class="col s12 m4 l4 blue lighten-5">
+                <button>Rum</button>
+              </div>
+              <div id="tequilaInput" class="col s12 m4 l4 green lighten-5">
+                <button>Tequila</button>
+              </div>
+            </div>
+            <div class="row">
+              <div id="whiskeyInput" class="col s12 m4 l4 red lighten-2">
+                <button>Whiskey</button>
+              </div>
+              <div id="ginInput" class="col s12 m4 l4 blue lighten-2">
+                <button>Gin</button>
+              </div>
+              <div id="nonInput" class="col s12 m4 l4 green lighten-2">
+                <button>Non-Alcohol</button>
+              </div>
+            </div>
+          </div>
+          <div class="row container">
+            <div class="col s12 m4 l4 blue lighten-4">
+              <h5>Select a drink</h5>
+              <div class="row">
+                <form>
+                  <label for="drinkSelect"></label>
+                  <select id="chooseRecipe" name="chooseRecipe">
+                    <option value="moscow">Moscow Mule</option>
+                    <option value="margarita">Margarita</option>
+                    <option value="cosmo">Cosmo</option>
+                    <option value="oldFashioned">Old Fashioned</option>
+                  </select>
+                  <input type="submit" />
+                </form>
+              </div>
+              <div id="alcoholHistory" class="green lighten-4">
+                <h5>Alcohol History</h5>
+              </div>
+            </div>
+            <div class="col s12 m8 l8 red lighten-4">
+              <div id="alcoholDisplay">
+                <h5>alcoholDisplay</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer Starts -->
+      <footer class="page-footer grey darken-4">
+        <div class="container grey darken-4">
+          <div class="row">
+            <div class="col l6 m6 s12">
+              <h5 class="white-text left-align">AlcoCALL</h5>
+              <p class="grey-text text-lighten-4 left-align">
+                "The virtual bartender application that uses what you've got."
+              </p>
+            </div>
+            <!-- <div class="col l4 offset-6 m6 s12">
                 <h5 class="white-text left-align">Links</h5>
                 <ul>
                   <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
@@ -63,21 +110,17 @@
                   <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
                 </ul>
               </div> -->
+          </div>
         </div>
-      </div>
-      <div class="footer-copyright grey darken-4">
-        <div class="container grey darken-4 left">
-          © 2020, All rights reserved: AlcoCALL by The
-          Coding Commanders
-          <a
-            class="grey-text text-lighten-4 right"
-            href="#!"
-            >More Links</a
-          >
+        <div class="footer-copyright grey darken-4">
+          <div class="container grey darken-4 left">
+            © 2020, All rights reserved: AlcoCALL by The Coding Commanders
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+          </div>
         </div>
-      </div>
-    </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
-    <script src="random.js"></script>
+      </footer>
+    </main>
+
+    <script src="liquor.js"></script>
   </body>
 </html>
