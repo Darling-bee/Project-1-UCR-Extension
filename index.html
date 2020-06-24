@@ -22,7 +22,7 @@
           <nav>
             <div class="nav-wrapper grey darken-4">
               <div class="left">
-                <a href="#" class="brand-logo"></a><i class="material-icons">whatshot</i>
+                <img class="brand-logo "src="images/alcocall_logo.png" alt="Alcocall Logo">
               </div>
               <ul id="nav-mobile" class="right hide-on-sm-and-down">
                 <li><a href="about.html">About</a></li>
@@ -35,83 +35,86 @@
           <!-- End of Navigation Bar -->
 
       <!-- Start of jumbotron/carousel element -->
-      <div class="carousel carousel-slider grey lighten-4">
+      <div>
+      <div id="main-carousel" class="carousel carousel-slider center grey lighten-4">
         <a class="carousel-item" href="#one!"
-          ><img src="/images/kobby-mendez-xBFTjrMIC0c-unsplash.jpg"
+          ><img class="image-size" src="images/kobby-mendez-xBFTjrMIC0c-unsplash.jpg"
         /></a>
         <a class="carousel-item" href="#two!"
-          ><img src="/images/maria-avdeeva-4xWsYn3XtvQ-unsplash.jpg"
+          ><img class="image-size" src="images/maria-avdeeva-4xWsYn3XtvQ-unsplash.jpg"
         /></a>
         <a class="carousel-item" href="#three!"
-          ><img src="/images/walter-lee-olivares-de-la-cruz-cUFli52JBoo-unsplash.jpg"
+          ><img src="images/walter-lee-olivares-de-la-cruz-cUFli52JBoo-unsplash.jpg"
         /></a>
         <a class="carousel-item" href="#four!"
-          ><img src="/images/ergita-sela-h1tb2E1f3u4-unsplash.jpg"
+          ><img class="image-size" src="images/ergita-sela-h1tb2E1f3u4-unsplash.jpg"
         /></a>
+      </div>
       </div>
       <!-- End of Jumbotron element -->
       <div class="divider"></div>
+      <section class="main-text-section">
+        <h5>USE WHAT YOU'VE GOT!</h5>
+        <p class="main-text flow-text">User wants a new alcoholic drink to experience, clicks on ingredients available, and is presented with matching recipes. Alternatively, user is unsatisfied with recipe options, and is presented with a button to get an Uber and a list of the closest local bars.</p>
+      </section>
       <!-- Question Cards -->
       <!-- Card "Search by liquor" Starts -->
       <div class="grey lighten-4">
         <div class="row left">
-            <div id="liquorSearch" class="col s12 m4 l4 left">
+            <div id="liquorSearch" class="col s12 m8 l4 left">
                 <div class="card icon-block">
                     <div class="card-image">
-                          <img src="/images/jenna-bollweg-5Ufq_E6PCz0-unsplash.jpg" />
-                          <span class="card-title">Liquor Search</span>
+                          <img src="images/jenna-bollweg-5Ufq_E6PCz0-unsplash.jpg" />
+                          <span class="card-title"></span>
                     </div>
                         <div class="card-content">
-                            <p>
-                                I am a very simple card. I am good at containing small bits of
-                                information. I am convenient because I require little markup
-                                to use effectively.
-                            </p>
+                            <h5>
+                              Liquor Search
+                            </h5>
+                            <p>Text Here</p>
                         </div>
                         <div class="card-action">
-                            <a class="waves-effect btn-flat grey pulse" href="liquor_search.html">GET DRINKS!</a>
+                            <a class="waves-effect btn-flat black pulse card-buttons" href="liquor_search.html">GET DRINKS!</a>
                         </div>
                     </div>
                 </div>
                 <!-- Card "Search by liquor" ends -->
               
                 <!-- Card "Pick my drink" (Random drink recipe card) -->
-                <div id="randomDrink" class="col s12 m4 left">
+                <div id="randomDrink" class="col s12 m8 l4 left">
                     <div class="card icon-block">
                         <div class="card-image">
-                            <img src="images/sample-1.jpg" />
-                <span class="card-title">Random</span>
+                            <img src="images/ergita-sela-h1tb2E1f3u4-unsplash.jpg" />
+                <span class="card-title"></span>
                 </div>
                 <div class="card-content">
-                  <p>
-                    I am a very simple card. I am good at containing small bits of
-                    information. I am convenient because I require little markup
-                    to use effectively.
-                  </p>
+                  <h5>
+                    Random Drink
+                  </h5>
+                  <p>Text Here</p>
                 </div>
               <div class="card-action">
-                <a class="waves-effect btn-flat grey pulse" href="random_drink.html">SURPRISE ME!</a>
+                <a class="waves-effect btn-flat black pulse card-buttons" href="random_drink.html">SURPRISE ME!</a>
               </div>
             </div>
         </div>
         <!-- Card "Pick my drink" ends -->
         
         <!-- Card "Bar finder" starts -->
-          <div id="barSearch" class="col s12 m4 left">
+          <div id="barSearch" class="col s12 m8 l4 left">
             <div class="card icon-block">
               <div class="card-image">
-                <img src="images/sample-1.jpg" />
-                <span class="card-title">Bar Search</span>
+                <img src="images/maria-avdeeva-4xWsYn3XtvQ-unsplash.jpg" />
+                <span class="card-title"></span>
               </div>
               <div class="card-content">
-                <p>
-                  I am a very simple card. I am good at containing small bits of
-                  information. I am convenient because I require little markup
-                  to use effectively.
-                </p>
+                <h5>
+                 Bar Search
+                </h5>
+                <p>Text Here</p>
               </div>
               <div class="card-action">
-                <a class="waves-effect btn-flat grey pulse" href="bar_search.html">BARTENDER!</a>
+                <a class="waves-effect btn-flat black pulse card-buttons" href="bar_search.html">BARTENDER!</a>
               </div>
             </div>
           </div>
@@ -120,10 +123,10 @@
         <!-- Question cards end -->
 
         <!-- Youtube and Maps links -->
-        <div class="row">
+        <div class="row media-section">
           <div id="youTube" class="col s12 m6 l6">
             <div class="video-container">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/mDuAe3Q0zdI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/mDuAe3Q0zdI" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>      
           </div>
           <div id class="maps" class="col s12 m6 l6">
@@ -160,7 +163,8 @@
         </footer>
             
       </main>
-    
+     <!-- Compiled and minified JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./script.js"></script>
   </body>
 </html>
