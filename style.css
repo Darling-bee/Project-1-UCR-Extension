@@ -88,6 +88,10 @@ h1 {
   padding: 20px;
 }
 
+#mapsFull {
+  height: fit-content;
+}
+
 #alcoholInput {
 }
 
