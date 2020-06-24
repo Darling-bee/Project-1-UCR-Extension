@@ -3,3 +3,24 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+.uvGreen {
+  border-width: thick;
+  border: green;
+}
+
+.uvYellow {
+  border: yellow;
+}
+
+.uvOrange {
+  border: orange;
+}
+
+.uvRed {
+  border: red;
+}
+
+.uvPurple {
+  border: purple;
+}
