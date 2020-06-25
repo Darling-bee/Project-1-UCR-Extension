@@ -9,7 +9,7 @@
 .container {
   text-align: center;
   color: dimgray;
-  background-color: dimgrey;
+  background-color: lightgrey;
 }
 
 .brand-logo {
@@ -48,7 +48,16 @@ h5 {
   font-weight: bold;
 }
 
-h1 {
+.drink-wrapper {
+  padding-top: 20px;
+}
+
+.drink-wrapper-images {
+  padding: 5px;
+}
+
+.drink-wrapper-buttons {
+  color: gold;
 }
 
 /* .carousel {
