@@ -40,63 +40,84 @@
 				</div>
 			</nav>
 			<!-- End of Navigation Bar -->
+			
+<!-- Start of main container -->
+<section>
+	<div class="row">
+	  <h5>Find a Drink!</h5>
+	  <div class="row container">
+		<div class="row drink-wrapper">
+		  <div id="vodkaInput" class="col s12 m4 l4">
+			<!-- <a href="">
+			  <img
+				class="drink-wrapper-images"
+				width="150"
+				src="images/bradley-dunn-fIZhuM3HlEU-unsplash.jpg"
+			  />
+			</a> -->
+			<button class="btn-flat black pulse drink-wrapper-buttons">
+			  Vodka
+			</button>
+		  </div>
 
-			<!-- Start of main container -->
-			<section>
-				<div class="row">
-					<h3>Liquor Search Page</h3>
-					<div class="row container orange lighten-2">
-						<div class="row">
-							<div id="vodkaInput" class="col s12 m4 l4 red lighten-5">
-								<button>Vodka</button>
-							</div>
-							<div id="rumInput" class="col s12 m4 l4 blue lighten-5">
-								<button>Rum</button>
-							</div>
-							<div id="tequilaInput" class="col s12 m4 l4 green lighten-5">
-								<button>Tequila</button>
-							</div>
-						</div>
-						<div class="row">
-							<div id="whiskeyInput" class="col s12 m4 l4 red lighten-2">
-								<button>Whiskey</button>
-							</div>
-							<div id="ginInput" class="col s12 m4 l4 blue lighten-2">
-								<button>Gin</button>
-							</div>
-							<div id="nonInput" class="col s12 m4 l4 green lighten-2">
-								<button>Non-Alcohol</button>
-							</div>
-						</div>
-					</div>
-					<div class="row container">
-						<div class="col s12 m4 l4 blue lighten-4">
-							<h5>Select a drink</h5>
-							<div class="row">
-								<form>
-									<label for="drinkSelect"></label>
-									<div id="alcoholInput">
-										<label id="label"></label>
-										<select id="select" class="browser-default">
-											<option value="" disabled selected
-												>Choose your option</option
-											> </select
-										>alcoholInput
-									</div>
-								</form>
-							</div>
-							<div id="alcoholHistory" class="green lighten-4">
-								<h5>Alcohol History</h5>
-							</div>
-						</div>
-						<div class="col s12 m8 l8 red lighten-4">
-							<div id="alcoholDisplay">
-								<h5>alcoholDisplay</h5>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+		  <!-- Rum Button -->
+		  <div id="rumInput" class="col s12 m4 l4">
+			<button class="btn-flat black pulse drink-wrapper-buttons">
+			  Rum
+			</button>
+		  </div>
+
+		  <!-- Tequila Button -->
+		  <div id="tequilaInput" class="col s12 m4 l4">
+			<button class="btn-flat black pulse drink-wrapper-buttons">
+			  Tequila
+			</button>
+		  </div>
+		</div>
+		<div class="row">
+		  <div id="whiskeyInput" class="col s12 m4">
+			<button class="btn-flat black pulse drink-wrapper-buttons">
+			  Whiskey
+			</button>
+		  </div>
+		  <div id="ginInput" class="col s12 m4 l4">
+			<button class="btn-flat black pulse drink-wrapper-buttons">
+			  Gin
+			</button>
+		  </div>
+		  <div id="nonInput" class="col s12 m4 l4">
+			<button class="btn-flat black pulse drink-wrapper-buttons">
+			  Non-Alcohol
+			</button>
+		  </div>
+		</div>
+	  </div>
+	  <div class="row container">
+		<div class="col s12 m4 l4">
+		  <h5>Select a drink</h5>
+		  <div class="row">
+			<form>
+			  <label for="drinkSelect"></label>
+			  <div id="alcoholInput">
+				<label id="label"></label>
+				<select id="select" class="browser-default">
+				  <option value="" disabled selected
+					>Choose your option</option
+				  ></select
+				>
+			  </div>
+			</form>
+		  </div>
+		</div>
+		<div class="col s12 m8 l8 white">
+		  <div id="alcoholDisplay">
+			<h5>Pick a drink on the dropdown to the left!</h5>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </section>
+
 
 			<!-- Footer Starts -->
 			<footer class="page-footer grey darken-4">

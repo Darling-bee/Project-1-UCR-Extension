@@ -27,7 +27,119 @@
 .main-text {
   padding-left: 25px;
   padding-right: 25px;
+}/* Classes ------------------------- */
+
+.body {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+.container {
+  text-align: center;
+  color: dimgray;
+  background-color: lightgrey;
+}
+
+.brand-logo {
+  left: 15px;
+  margin-top: 7px;
+  right: auto;
+  float: left;
+  padding-left: 25px;
+}
+
+.main-text-section {
+  padding: 20px;
+}
+
+.main-text {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.card-title {
+  color: dimgrey;
+  font-size: 10px;
+}
+
+.card-buttons {
+  margin: auto;
+}
+
+.image-size {
+  width: 100%;
+  height: 100%;
+}
+
+h5 {
+  color: dimgray;
+  font-weight: bold;
+}
+
+.drink-wrapper {
+  padding-top: 20px;
+}
+
+.drink-wrapper-images {
+  padding: 5px;
+}
+
+.drink-wrapper-buttons {
+  color: gold;
+}
+
+/* .carousel {
+  display: block;
+} */
+/* ID's ------------------------------- */
+
+#nav-mobile {
+  color: cadetblue;
+}
+
+#liquorSearch {
+  padding: 35px;
+}
+
+#randomDrink {
+  padding: 35px;
+}
+
+#barSearch {
+  padding: 35px;
+}
+
+.media-section {
+  border: dimgray;
+  border-width: 1px;
+}
+
+#youTube {
+  padding-left: 60px;
+  padding-bottom: 40px;
+  border: dimgray;
+  border-width: 1px;
+}
+
+#maps {
+  padding-top: 20px;
+}
+
+#alcoholInput {
+}
+
+#rumInput {
+}
+
+#tequilaInput {
+}
+
+#chooseRecipe {
+  display: block;
+}
+
+/* Test --------------------------- */
 
 .card-title {
   color: dimgrey;
@@ -78,18 +190,14 @@ h1 {
 }
 
 #youTube {
-  padding: 20px;
   padding-left: 60px;
+  padding-bottom: 40px;
   border: dimgray;
   border-width: 1px;
 }
 
 #maps {
-  padding: 20px;
-}
-
-#mapsFull {
-  height: fit-content;
+  padding-top: 20px;
 }
 
 #alcoholInput {
