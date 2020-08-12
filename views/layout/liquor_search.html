@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Search by Liquor</title>
 
     <link
       rel="stylesheet"
@@ -22,14 +22,19 @@
       <nav>
         <div class="nav-wrapper grey darken-4">
           <div class="left">
-            <a href="#" class="brand-logo"></a
-            ><i class="material-icons">whatshot</i>
+            <a href="index.html">
+              <img
+                class="brand-logo"
+                src="../../public/assets/images/alcocall_logo.png"
+                alt="Alcocall Logo"
+              />
+            </a>
           </div>
           <ul id="nav-mobile" class="right hide-on-sm-and-down">
-            <li><a href="about.html">About</a></li>
-            <li><a href="spirits.html">Spirits</a></li>
-            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="liquor_search.html">Recipes</a></li>
+            <li><a href="random.html">Random Drink</a></li>
             <li><a href="bars.html">Bars</a></li>
+            <li><a href="beerSearch.html">Breweries</a></li>
           </ul>
         </div>
       </nav>
@@ -38,50 +43,74 @@
       <!-- Start of main container -->
       <section>
         <div class="row">
-          <h3>Liquor Search Page</h3>
-          <div class="row container orange lighten-2">
-            <div class="row">
-              <div id="vodkaInput" class="col s12 m4 l4 red lighten-5">
-                <button>Vodka</button>
+          <h5>Find a Drink!</h5>
+          <div class="row container">
+            <div class="row drink-wrapper">
+              <div id="vodkaInput" class="col s12 m4 l4">
+                <!-- <a href="">
+			  <img
+				class="drink-wrapper-images"
+				width="150"
+				src="images/bradley-dunn-fIZhuM3HlEU-unsplash.jpg"
+			  />
+			</a> -->
+                <button class="btn-flat black pulse drink-wrapper-buttons">
+                  Vodka
+                </button>
               </div>
-              <div id="rumInput" class="col s12 m4 l4 blue lighten-5">
-                <button>Rum</button>
+
+              <!-- Rum Button -->
+              <div id="rumInput" class="col s12 m4 l4">
+                <button class="btn-flat black pulse drink-wrapper-buttons">
+                  Rum
+                </button>
               </div>
-              <div id="tequilaInput" class="col s12 m4 l4 green lighten-5">
-                <button>Tequila</button>
+
+              <!-- Tequila Button -->
+              <div id="tequilaInput" class="col s12 m4 l4">
+                <button class="btn-flat black pulse drink-wrapper-buttons">
+                  Tequila
+                </button>
               </div>
             </div>
             <div class="row">
-              <div id="whiskeyInput" class="col s12 m4 l4 red lighten-2">
-                <button>Whiskey</button>
+              <div id="whiskeyInput" class="col s12 m4">
+                <button class="btn-flat black pulse drink-wrapper-buttons">
+                  Whiskey
+                </button>
               </div>
-              <div id="ginInput" class="col s12 m4 l4 blue lighten-2">
-                <button>Gin</button>
+              <div id="ginInput" class="col s12 m4 l4">
+                <button class="btn-flat black pulse drink-wrapper-buttons">
+                  Gin
+                </button>
               </div>
-              <div id="nonInput" class="col s12 m4 l4 green lighten-2">
-                <button>Non-Alcohol</button>
+              <div id="nonInput" class="col s12 m4 l4">
+                <button class="btn-flat black pulse drink-wrapper-buttons">
+                  Non-Alcohol
+                </button>
               </div>
             </div>
           </div>
           <div class="row container">
-            <div class="col s12 m4 l4 blue lighten-4">
-              <h5>col 1</h5>
-              <div id="alcoholInput">
-                <label id="label"></label>
-                <select id="select" class="browser-default">
-                  <option value="" disabled selected
-                    >Choose your option</option
-                  > </select
-                >alcoholInput
-              </div>
-
-              <div id="alcoholHistory" class="green lighten-4">
-                alcoholHistory
+            <div class="col s12 m4 l4">
+              <h5>Select a drink</h5>
+              <div class="row">
+                <form>
+                  <label for="drinkSelect"></label>
+                  <div id="alcoholInput">
+                    <label id="label"></label>
+                    <select id="select" class="browser-default">
+                      <option value="" disabled selected
+                        >Choose your option</option
+                      ></select
+                    >
+                  </div>
+                </form>
               </div>
             </div>
-            <div class="col s12 m8 l8 red lighten-4">
+            <div class="col s12 m8 l8 white">
               <div id="alcoholDisplay">
-                <h5>alcoholDisplay</h5>
+                <h5>Pick a drink on the dropdown to the left!</h5>
               </div>
             </div>
           </div>
@@ -123,6 +152,6 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
       crossorigin="anonymous"
     ></script>
-    <script src="./script.js"></script>
+    <script src="../../public/assets/js/liquorScript.js"></script>
   </body>
 </html>

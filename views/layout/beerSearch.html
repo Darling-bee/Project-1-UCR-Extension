@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<!DOCTYPE html>
+	<html lang="en">
+	  <head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Breweries</title>
+	
+		<link
+		  rel="stylesheet"
+		  href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+		/>
+		<link rel="stylesheet" href="./style.css" />
+		<link
+		  href="https://fonts.googleapis.com/icon?family=Material+Icons"
+		  rel="stylesheet"
+		/>
+		
+		<!--Let browser know website is optimized for mobile-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	</head>
+	<body>
+		<body class="grey lighten-2">
+			<!-- Container/Body content -->
+			<main class="container grey lighten-4">
+				  <!--Start Navigation Bar -->
+				  <nav>
+					<div class="nav-wrapper grey darken-4">
+						<div class="left">
+							<a href="index.html">
+								<img
+									class="brand-logo"
+									src="images/alcocall_logo.png"
+									alt="Alcocall Logo"
+								/>
+							</a>
+						</div>
+					  <ul id="nav-mobile" class="right hide-on-sm-and-down">
+						<li><a href="liquor_search.html">Recipes</a></li>
+						<li><a href="random.html">Random Drink</a></li>
+						<li><a href="bars.html">Bars</a></li>
+						<li><a href="beerSearch.html">Breweries</a></li>
+					  </ul>
+					</div>
+				  </nav>
+				  <!-- End of Navigation Bar -->
+        <h3 text-align: center>Enter a city to find a brewery near you.</h3>
+        <div class="row main-text">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s6">
+                  <input placeholder="City Name" id="firstName" type="text" class="validate">
+                  <label for="city_name">City Name</label>
+                </div>
+                <button>Find Local Beer!</button>
+				<div id="brewery"></div>
+			</br>
+		</br>
+	</br>
+</br>
+<div>Brought to you by Open Brewery DB</div>
+        <!-- Footer Starts -->
+        <footer class="page-footer grey darken-4">
+			<div class="container grey darken-4">
+			  <div class="row">
+				<div class="col l6 m6 s12">
+				  <h5 class="white-text left-align">AlcoCALL</h5>
+				  <p class="grey-text text-lighten-4 left-align">"The virtual bartender application that uses what you've got."</p>
+				</div>
+			  </div>
+			</div>
+			<div class="footer-copyright grey darken-4">
+			  <div class="container grey darken-4 left">
+			  © 2020, All rights reserved: AlcoCALL by The Coding Commanders
+			  <a class="grey-text text-lighten-4 right" href="AlcoholReferences.html">More Links</a>
+			  </div>
+			</div>
+		  </footer>
+			  
+		</main>
+		<!--JavaScript at end of body for optimized loading-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
+			crossorigin="anonymous"
+		></script>
+		<script src="./beerSearch.js"></script>
+	</body>
+</html>
